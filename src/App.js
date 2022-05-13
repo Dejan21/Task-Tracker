@@ -1,5 +1,6 @@
 //import React from "react";  need for class compononet but not for Func
 import { useState } from "react"
+import AddTask from "./components/AddTask";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 
@@ -40,7 +41,8 @@ const toggleReminder = (id) => {
 
   return (
     <div className="container">
-      <Header title='Task Tracker'/>
+      <Header title='Task Tracker' />
+      <AddTask />
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : 'No Tasks to show'}
     </div>
   )
